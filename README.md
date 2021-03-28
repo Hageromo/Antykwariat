@@ -1,2 +1,2 @@
 # Antykwariat
-Repozytorium aplikacji mobilnej "Antykwariat"
+Repozytorium aplikacji webowej "Antykwariat"
