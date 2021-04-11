@@ -1,0 +1,14 @@
+app:
+  titleIndex: ZUT App
+  titleLogin: Login
+  componentsHeaderChangeLanguage: Language
+  layoutIndexHeaderBarMainPage: Main Page
+  layoutIndexHeaderBarMainPageAll: All objects
+  componentsHeaderen: English
+  componentsHeaderpl: Polish
+  layoutLoginButtonLogin: Log In
+  layoutLoginPassword: Password
+  layoutLoginUsername: Username
+  layoutLoginUserLogout: Logout
+  layoutHeaderLogin: Sign In
+  layoutHeaderLogout: Logout
