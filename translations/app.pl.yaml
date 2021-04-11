@@ -1,0 +1,14 @@
+app:
+  titleIndex: Appka ZUT
+  titleLogin: Logowanie
+  componentsHeaderChangeLanguage: Język
+  layoutIndexHeaderBarMainPage: Strona główna
+  layoutIndexHeaderBarMainPageAll: Wszystkie obiekty
+  componentsHeaderen: Angielski
+  componentsHeaderpl: Polski
+  layoutLoginButtonLogin: Zaloguj się
+  layoutLoginPassword: Hasło
+  layoutLoginUsername: Nazwa użytkownika
+  layoutLoginUserLogout: Wyloguj się
+  layoutHeaderLogin: Zaloguj się
+  layoutHeaderLogout: Wyloguj się
