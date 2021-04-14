@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 class CategoryController extends AbstractController
 {
     private RequestStack $requestStack;
@@ -31,6 +32,9 @@ class CategoryController extends AbstractController
         RequestStack $requestStack,
         EntityManagerInterface $entityManager
     )
+        
+
+
     {
         $this->paginator = $paginator;
         $this->requestStack = $requestStack;
@@ -49,6 +53,8 @@ class CategoryController extends AbstractController
      *         "_locale": "%app_locales%",
      *     }
      * )
+     *
+     * Dodanie funkcjonalnosci w stronie z kategoriami
      * @param int $catID
      * @return Response
      */
@@ -71,4 +77,27 @@ class CategoryController extends AbstractController
             'myCollections' => $paginatedMyCollections
         ]);
     }
+
+
+    public function in(int $catID): Response
+    {
+        $category = $this->categoryRepository->findOneBy(['id' => $catID]);
+        if(!$category) {
+            throw $this->createNotFoundException('The product does not exist');
+        }
+
+        $paginatedMyCollections = $this->paginator->paginate(
+            $category->getMyCollections(),
+            $this->requestStack->getCurrentRequest()->query->getInt('page', 1),
+            $this->requestStack->getCurrentRequest()->query->getInt('limit', 12)
+        );
+
+        return $this->render('category/index.html.twig', [
+            'categories' => $this->categoryTranslationRepository->findBy(['locale' => $this->getRequestLocale]),
+            'category' => $category->translate($this->getRequestLocale),
+            'myCollections' => $paginatedMyCollections
+        ]);
+    }
 }
+
+
