@@ -1,6 +1,7 @@
 app:
   titleIndex: ZUT App
   titleLogin: Login
+  titleRegister: Register
   componentsHeaderChangeLanguage: Language
   layoutIndexHeaderBarMainPage: Main Page
   layoutIndexHeaderBarMainPageAll: All objects
@@ -9,6 +10,9 @@ app:
   layoutLoginButtonLogin: Log In
   layoutLoginPassword: Password
   layoutLoginUsername: Username
+  layoutRegisterButtonRegister: Register
+  layoutRegisterPassword: Password
+  layoutRegisterUsername: Username
   layoutLoginUserLogout: Logout
   layoutHeaderLogin: Sign In
   layoutHeaderLogout: Logout

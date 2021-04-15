@@ -14,7 +14,7 @@
                     You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">{{ t('app.layoutLoginUserLogout', {}, 'app')|trans }}</a>
                 </div>
             {% endif %}
-            <input type="text" {{ last_username }} name="username" id="inputUsername" class="form-control" placeholder="{{ t('app.layoutLoginUsername', {}, 'app')|trans }}" required autofocus>
+            <input type="text" {{ last_username }} name="username" id="inputUsername" class="form-control mb-1" placeholder="{{ t('app.layoutLoginUsername', {}, 'app')|trans }}" required autofocus>
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="{{ t('app.layoutLoginPassword', {}, 'app')|trans }}" required>
 
             <input type="hidden" name="_csrf_token"
@@ -22,6 +22,7 @@
             >
 
             <button class="btn btn-lg btn-primary btn-block" type="submit">{{ t('app.layoutLoginButtonLogin', {}, 'app')|trans }}</button>
+            <a href="{{ path('app_register') }}">Register</a>
         </form>
     </div>
 {% endblock %}

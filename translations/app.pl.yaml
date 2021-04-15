@@ -1,6 +1,7 @@
 app:
   titleIndex: Appka ZUT
   titleLogin: Logowanie
+  titleRegister: Rejestracja
   componentsHeaderChangeLanguage: Język
   layoutIndexHeaderBarMainPage: Strona główna
   layoutIndexHeaderBarMainPageAll: Wszystkie obiekty
@@ -9,6 +10,9 @@ app:
   layoutLoginButtonLogin: Zaloguj się
   layoutLoginPassword: Hasło
   layoutLoginUsername: Nazwa użytkownika
+  layoutRegisterButtonRegister: Zarejestruj się
+  layoutRegisterPassword: Hasło
+  layoutRegisterUsername: Nazwa użytkownika
   layoutLoginUserLogout: Wyloguj się
   layoutHeaderLogin: Zaloguj się
   layoutHeaderLogout: Wyloguj się
