@@ -2,7 +2,7 @@
     <div class="container">
         <a class="navbar-brand flex-grow-1" href="{{ path('index') }}">{{ site_name }}</a>
         {% if not(app.request.get('_route') is null) %}
-            {% if (not (app.request.get('_route') starts with 'admin')) and (not (app.request.get('_route') starts with 'app_login'))%}
+            {% if (not (app.request.get('_route') starts with 'admin')) and (not (app.request.get('_route') starts with 'app_login') and (not (app.request.get('_route') starts with 'app_register')))%}
                 <div class="dropdown mr-2">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="far fa-flag"></i><span class="">&nbsp;&nbsp;{{ t('app.componentsHeaderChangeLanguage', {}, 'app')|trans }}</span>
