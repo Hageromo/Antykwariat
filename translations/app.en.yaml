@@ -3,6 +3,11 @@ app:
   titleLogin: Login
   titleRegister: Register
   componentsHeaderChangeLanguage: Language
+  layoutCollectionHeaderBarMainPage: Main page
+  layoutProgramRightBarSimilarTitle: Similar collections
+  layoutProgramRightBarInfoTitle: Attributes
+  layoutHeaderManageCategories: Manage collections
+  layoutHeaderHello: Hello
   layoutIndexHeaderBarMainPage: Main Page
   layoutIndexHeaderBarMainPageAll: All objects
   componentsHeaderen: English

@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ site_name }} - manage collections{% endblock %}
+{% block body %}
+    <div class="container flex-fill mt-2">
+
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success mb-2">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        {% for message in app.flashes('error') %}
+            <div class="alert alert-danger mb-2">
+                <h4 class="alert-heading">Errors:</h4>
+                {% if message is iterable %}
+                    <ul class="m-0">
+                        {% for error in message %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    {{ message }}
+                {% endif %}
+            </div>
+        {% endfor %}
+        <div class="row mt-2">
+            <div class="col-12">
+                <button type="button" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#addCollection">Add collection</button>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Collection name PL</th>
+                        <th scope="col">Collection name EN</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for category in categories %}
+                    <tr>
+                        <th scope="row">{{ loop.index }}</th>
+                        <td>{{ category.translations.get('pl').name }}</td>
+                        <td>{{ category.translations.get('en').name }}</td>
+                        <td>
+                            <a href="#" class="text-reset text-decoration-none mr-2" data-toggle="dropdown">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Add object</a>
+                                <a class="dropdown-item" href="#">Add attribute</a>
+                                <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addCollection" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Collection name PL</label>
+                            <input type="email" class="form-control" name="collectionPL">
+                        </div>
+                        <div class="form-group">
+                            <label>Collection name EN</label>
+                            <input type="text" class="form-control" id="collectionEN">
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Add collection</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
