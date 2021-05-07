@@ -3,6 +3,11 @@ app:
   titleLogin: Login
   titleRegister: Register
   componentsHeaderChangeLanguage: Language
+  layoutCollectionHeaderBarMainPage: Main page
+  layoutProgramRightBarSimilarTitle: Similar collections
+  layoutProgramRightBarInfoTitle: Attributes
+  layoutHeaderManageCategories: Manage
+  layoutHeaderHello: Hello
   layoutIndexHeaderBarMainPage: Main Page
   layoutIndexHeaderBarMainPageAll: All objects
   componentsHeaderen: English
@@ -16,3 +21,19 @@ app:
   layoutLoginUserLogout: Logout
   layoutHeaderLogin: Sign In
   layoutHeaderLogout: Logout
+  addCategoryNamePL: Name PL
+  addCategoryNameEN: Name EN
+  addCategoryNameSubmit: Submit
+  addAttributeName: Attribute name
+  addAttributeSubmit: Submit
+  addAttributeChooseEntity: Choose collection
+  addObjectName: Object name
+  addObjectDescription: Object description
+  addObjectChooseEntity: Choose collection
+  addObjectSubmit: Submit
+  addObjectChooseImage: Choose thumbnail
+  objectAddAttributes: Manage attributes
+  objectRemove: Remove collection
+  addAttributeToObjectAttributeName: Attribute name
+  addAttributeToObjectValue: Value
+  addAttributeToObjectSubmit: Change attribute

@@ -3,3 +3,4 @@ twig:
     globals:
         site_name: '%site_name%'
         language_context: '@App\Core\Language\LanguageContext'
+    form_themes: ['bootstrap_4_layout.html.twig']

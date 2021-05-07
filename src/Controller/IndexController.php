@@ -18,6 +18,7 @@ class IndexController extends AbstractController
     private ObjectRepository $collectionRepository;
     private ObjectRepository $categoryTranslationRepository;
     private RequestStack $requestStack;
+    private PaginatorInterface $paginator;
 
     public function __construct
     (
@@ -59,7 +60,7 @@ class IndexController extends AbstractController
         $paginatedMyCollections = $this->paginator->paginate(
             $myCollections,
             $this->requestStack->getCurrentRequest()->query->getInt('page', 1),
-            $this->requestStack->getCurrentRequest()->query->getInt('limit', 12)
+            $this->requestStack->getCurrentRequest()->query->getInt('limit', 9)
         );
 
         return $this->render('index/index.html.twig', [
