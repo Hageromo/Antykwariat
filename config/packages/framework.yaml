@@ -22,3 +22,5 @@ framework:
                 base_path: 'assets/css'
             js:
                 base_path: 'assets/js'
+            images:
+                base_path: 'assets/img'

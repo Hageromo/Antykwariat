@@ -6,7 +6,7 @@ app:
   layoutCollectionHeaderBarMainPage: Strona główna
   layoutProgramRightBarSimilarTitle: Podobne kolekcje
   layoutProgramRightBarInfoTitle: Atrybuty
-  layoutHeaderManageCategories: Zarządzaj kolekcjami
+
   layoutHeaderHello: Witaj
   layoutIndexHeaderBarMainPage: Strona główna
   layoutIndexHeaderBarMainPageAll: Wszystkie obiekty
@@ -21,3 +21,19 @@ app:
   layoutLoginUserLogout: Wyloguj się
   layoutHeaderLogin: Zaloguj się
   layoutHeaderLogout: Wyloguj się
+  addCategoryNamePL: Nazwa PL
+  addCategoryNameEN: Nazwa EN
+  addCategoryNameSubmit: Zatwierdź
+  addAttributeName: Nazwa atrybutu
+  addAttributeSubmit: Zatwierdź
+  addAttributeChooseEntity: Wybierz kolekcję
+  addObjectName: Nazwa obiektu
+  addObjectDescription: Opis obiektu
+  addObjectChooseEntity: Wybierz kolekcję
+  addObjectSubmit: Zatwierdź
+  addObjectChooseImage: Wybierz miniaturkę
+  objectAddAttributes: Zarządzaj atrybutami
+  objectRemove: Usuń kolekcję
+  addAttributeToObjectAttributeName: Nazwa atrybutu
+  addAttributeToObjectValue: Wartość
+  addAttributeToObjectSubmit: Zmień atrybut

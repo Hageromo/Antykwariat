@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-// test 19:42
+
 use App\Entity\Category;
 use App\Entity\CategoryTranslation;
 use App\Repository\CategoryRepository;
@@ -23,7 +23,7 @@ class CategoryController extends AbstractController
      * @var CategoryRepository|ObjectRepository
      */
     private $categoryRepository;
-    private $paginator;
+    private PaginatorInterface $paginator;
 
     public function __construct
     (
@@ -49,8 +49,6 @@ class CategoryController extends AbstractController
      *         "_locale": "%app_locales%",
      *     }
      * )
-     * @param int $catID
-     * @return Response
      */
     public function index(int $catID): Response
     {
@@ -62,7 +60,7 @@ class CategoryController extends AbstractController
         $paginatedMyCollections = $this->paginator->paginate(
             $category->getMyCollections(),
             $this->requestStack->getCurrentRequest()->query->getInt('page', 1),
-            $this->requestStack->getCurrentRequest()->query->getInt('limit', 12)
+            $this->requestStack->getCurrentRequest()->query->getInt('limit', 9)
         );
 
         return $this->render('category/index.html.twig', [
