@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-{% block title %}{{ site_name }} - manage{% endblock %}
+
 {% block body %}
     <div class="container flex-fill mt-2">
 
@@ -26,8 +26,7 @@
         <div class="row mt-2">
             <div class="col-12">
                 <button type="button" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#addCollection">Add collection</button>
-                <button type="button" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#addAttributeToCollection">Add attribute to collection</button>
-                <button type="button" class="btn btn-secondary mb-2" data-toggle="modal" data-target="#addObjectToCollection">Add object to collection</button>
+
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -39,7 +38,7 @@
                     </thead>
                     <tbody>
                     {% for category in categories %}
-                        <tr>
+
                         <th scope="row">{{ loop.index }}</th>
                         <td>{{ category.translations.get('pl').name }}</td>
                         <td>{{ category.translations.get('en').name }}</td>
@@ -84,6 +83,10 @@
                                         </div>
                                     </div>
                                 </div>
+=======
+                                <a class="dropdown-item" href="#">Add object</a>
+                                <a class="dropdown-item" href="#">Add attribute</a>
+                                <a class="dropdown-item" href="#">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -119,6 +122,18 @@
                 <div class="modal-body">
                     {{ form_start(form_object) }}
                     {{ form_end(form_object) }}
+=======
+                    <form>
+                        <div class="form-group">
+                            <label>Collection name PL</label>
+                            <input type="email" class="form-control" name="collectionPL">
+                        </div>
+                        <div class="form-group">
+                            <label>Collection name EN</label>
+                            <input type="text" class="form-control" id="collectionEN">
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Add collection</button>
+                    </form>
                 </div>
             </div>
         </div>

@@ -30,7 +30,7 @@ class CategoryController extends AbstractController
      */
     private $categoryRepository;
     private PaginatorInterface $paginator;
-    private UrlHelper $urlHelper;
+
 
     public function __construct
     (

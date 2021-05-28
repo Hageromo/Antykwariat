@@ -6,7 +6,7 @@ app:
   layoutCollectionHeaderBarMainPage: Main page
   layoutProgramRightBarSimilarTitle: Similar collections
   layoutProgramRightBarInfoTitle: Attributes
-  layoutHeaderManageCategories: Manage
+
   layoutHeaderHello: Hello
   layoutIndexHeaderBarMainPage: Main Page
   layoutIndexHeaderBarMainPageAll: All objects

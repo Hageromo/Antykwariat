@@ -21,6 +21,12 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Persistence\ObjectRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class CollectionController extends AbstractController
 {
@@ -35,6 +41,7 @@ class CollectionController extends AbstractController
         EntityManagerInterface $entityManager,
         RequestStack $requestStack,
         Filesystem $filesystem
+        RequestStack $requestStack
     )
     {
         $this->requestStack = $requestStack;
@@ -44,11 +51,15 @@ class CollectionController extends AbstractController
         $this->filesystem = $filesystem;
     }
 
+=======
+    }
     /**
      * @Route(
      *     "/{_locale}/collection/{slug}/",
      *     name="collection",
      *     methods={"GET", "POST"},
+=======
+     *     methods={"GET"},
      *     requirements={
      *         "_locale": "%app_locales%",
      *     }
@@ -187,5 +198,11 @@ class CollectionController extends AbstractController
         $response = new BinaryFileResponse('exports/'.$slug.'.xlsx');
         $response->setContentDisposition(ResponseHeaderBag::DISPOSITION_ATTACHMENT,$slug.'.xlsx');
         return $response;
+    }
+        return $this->render('collection/index.html.twig', [
+            'collection' => $collection,
+            'category' => $category,
+            'similarCollections' => $similarCollections
+        ]);
     }
 }
