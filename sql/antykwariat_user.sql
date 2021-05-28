@@ -1,0 +1,7 @@
+INSERT INTO m1036_antykwariat.user (id, username, roles, password) VALUES (3, 'admin', '["ROLE_ADMIN"]', '$argon2id$v=19$m=65536,t=4,p=1$aTd1WU9KZnBScnRnQnZqUw$P+lylCP07VcnftgTotscibuTG7o0NHuvmu6VaZ6EJ0Q');
+INSERT INTO m1036_antykwariat.user (id, username, roles, password) VALUES (4, 'user', '["ROLE_USER"]', '$argon2id$v=19$m=65536,t=4,p=1$REh1TWJ5LjM0alJ5OTZWNw$NVowitZwwpCmiwfTamiiK67Vl6XBhpvxoUjYWXOJtW8');
+INSERT INTO m1036_antykwariat.user (id, username, roles, password) VALUES (6, 'test', '["ROLE_USER"]', '$argon2id$v=19$m=65536,t=4,p=1$QTBKNzRjUnAwWlZXc3JQbg$mqZfLfXvCitGEvO9PiWDIsRDILRmo/erjEa0OKk5K14');
+INSERT INTO m1036_antykwariat.user (id, username, roles, password) VALUES (7, 'dupa', '["ROLE_USER"]', '$argon2id$v=19$m=65536,t=4,p=1$WGttNUdFMnpGcDVvc1pscQ$kUCg6Gi4ZfG5jU/6+MgUg2x0ZLD2ecFO6I8desLoToU');
+INSERT INTO m1036_antykwariat.user (id, username, roles, password) VALUES (8, 'admin1', '["ROLE_USER"]', '$argon2id$v=19$m=65536,t=4,p=1$c0d0QlVHN2p2T0tzRGg2dQ$cK25vq1HHJMBYn1+pGrAdkc+NMIgd7EHO0Jo3KkDIaY');
+INSERT INTO m1036_antykwariat.user (id, username, roles, password) VALUES (9, 'admin11', '["ROLE_USER"]', '$argon2id$v=19$m=65536,t=4,p=1$bDJ2R3FkSENzeXlWQXlqdw$DU4llL6Gk+WU0FcHYTFl1+tD+OVzPtnFXcyUKvCYyxI');
+INSERT INTO m1036_antykwariat.user (id, username, roles, password) VALUES (10, 'testuser1', '["ROLE_USER"]', '$argon2id$v=19$m=65536,t=4,p=1$dmxRRDBkQWtHL3lVcXZveA$WFli/E7hjq8P+2vpK3C1HObguejOUs2SEDqJHOrx000');

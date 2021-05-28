@@ -20,8 +20,13 @@
                     {{ t('app.layoutIndexHeaderBarMainPage', {}, 'app')|trans }}
                 </a>
             </li>
-            <li class="breadcrumb-item active">
+            <li class="breadcrumb-item active flex-grow-1">
                 {{ t('app.layoutIndexHeaderBarMainPageAll', {}, 'app')|trans }}
+            </li>
+            <li class="breadcrumb-item no-content">
+                <a href="{{ path('index_export') }}">
+                    Export all to XLSX
+                </a>
             </li>
         </ol>
         <div class="row mt-3">
@@ -49,6 +54,7 @@
                                 'slug': myCollection.slug,
                                 'name': myCollection.name,
                                 'description': myCollection.description,
+                                'image': myCollection.image
                             } %}
                         </div>
                     {% endfor %}
