@@ -40,6 +40,19 @@
                     <li class="breadcrumb-item active flex-grow-1">
                         {{ collection.name }}
                     </li>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li class="breadcrumb-item no-content">
+                            <a href="{{ path('collection_delete', {'slug': collection.slug}) }}">
+                                {{ t('app.objectRemove', {}, 'app')|trans }}
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="{{ path('category', {'catID': collection.category.id, 'catName': trimCat(category)}) }}" data-toggle="modal" data-target="#setAttributeToObject">
+                                {{ t('app.objectAddAttributes', {}, 'app')|trans }}
+                            </a>
+                        </li>
+                    {% endif %}
+=======
 {#                    {% if is_granted('ROLE_ADMIN') %}#}
 {#                        <li class="breadcrumb-item no-content">#}
 {#                            <a href="{{ path('admin_program_edit', {'slug': program.slug}) }}">#}
@@ -57,6 +70,12 @@
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3">
                             <div class="programButtonDownload">
+                                <a href="{{ path('collection_export', {'slug': collection.slug}) }}">
+                                    <button type="button" class="btn btn-secondary btn-lg w-100">
+                                        Export to XLSX
+                                    </button>
+                                </a>
+=======
                                 <button type="button" class="btn btn-secondary btn-lg w-100">
                                     Export to PDF
                                 </button>
@@ -75,6 +94,14 @@
                         </p>
                     </div>
                 </div>
+                {% if not (collection.image is empty) %}
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img src="{{ asset(collection.image, 'images') }}" class="img-thumbnail">
+                        </div>
+                    </div>
+                {% endif %}
+=======
 {#                {% if not (program.screenshoots is empty) %}#}
 {#                    <div class="row">#}
 {#                        <div class="col-12">#}
@@ -122,6 +149,31 @@
                     </div>
                 </div>
                 <div class="row">
+                    {% if collection.getMyCollectionAttributes() is empty %}
+                        <div class="col-12 text-center">
+                            There are not attributes yet.
+                        </div>
+                    {% else %}
+                        {% for attributes in collection.getMyCollectionAttributes() %}
+                            <div class="col-xl-12 col-lg-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-xl-2 col-lg-2 col-md-2 col-2">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-tags fa-stack-1x"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10 col-10">
+                                        <div class="font-weight-bold">{{ attributes.getAttribute().name }}</div>
+                                        {{ attributes.value }}
+                                    </div>
+                                </div>
+                            </div>
+                            {% if not loop.last %}
+                            <div class="col-12 d-xl-block d-lg-none d-md-none d-block"><hr></div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+=======
                     <div class="col-xl-12 col-lg-6 col-md-6">
                         <div class="row">
                             <div class="col-xl-2 col-lg-2 col-md-2 col-2">
@@ -193,6 +245,9 @@
                             {% include 'components/collectionCard.html.twig' with {
                                 'slug': collectionSimilar.slug,
                                 'name': collectionSimilar.name,
+                                'description': collectionSimilar.description,
+                                'image': collectionSimilar.image
+=======
                                 'description': collectionSimilar.description
                             }%}
                         </div>
@@ -201,4 +256,15 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="setAttributeToObject" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    {{ form_start(formSetAttribute) }}
+                    {{ form_end(formSetAttribute) }}
+                </div>
+            </div>
+        </div>
+    </div>
+=======
 {% endblock %}

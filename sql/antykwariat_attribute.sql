@@ -1,0 +1,14 @@
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (30, 'Kraj', 46);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (31, 'Wiek', 46);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (32, 'Materiał', 46);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (33, 'Długość', 46);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (34, 'Rok', 49);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (35, 'Kraj', 49);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (36, 'Stan', 49);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (37, 'Kraj', 50);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (38, 'Motyw', 50);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (39, 'Stan', 50);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (40, 'Rok', 52);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (41, 'Materiał', 52);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (42, 'Kraj pochodzenia', 52);
+INSERT INTO m1036_antykwariat.attribute (id, name, category_id) VALUES (43, 'asd', 46);

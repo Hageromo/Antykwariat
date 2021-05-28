@@ -23,6 +23,11 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                         <div class="dropdown-item">{{ t('app.layoutHeaderHello', {}, 'app')|trans }} {{ app.user.username }}!</div>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <hr class="dropdown-divider">
+                            <a class="dropdown-item" href="{{ path('admin_manage_collections') }}">{{ t('app.layoutHeaderManageCategories', {}, 'app')|trans }}</a>
+                        {% endif %}
+=======
 
                         <hr class="dropdown-divider">
                         <a class="dropdown-item" href="{{ path('app_logout') }}">{{ t('app.layoutHeaderLogout', {}, 'app')|trans }}</a>
